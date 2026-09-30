@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | Velvet Whisk</title>
+
+  <meta name="description"
+    content="Privacy Policy for Velvet Whisk. Learn how we collect, use and protect your information.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+
+  <!-- =====================================================
+         CSS
+         ===================================================== -->
+
+  <style>
+    /* =====================================================
+           ROOT
+           ===================================================== */
+
+    :root {
+      --rose: #B84A6B;
+      --rose-dark: #963B57;
+      --gold: #C9A45C;
+
+      --cream: #FFF8F0;
+      --cream-dark: #F7EDE3;
+
+      --cocoa: #352322;
+      --muted: #806F6B;
+
+      --soft-rose: #EFD3D9;
+
+      --white: #FFFFFF;
+
+      --border: rgba(184, 74, 107, 0.12);
+
+      --shadow:
+        0 15px 45px rgba(53, 35, 34, 0.07);
+    }
+
+
+    /* =====================================================
+           RESET
+           ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      background: var(--cream);
+
+      color: var(--cocoa);
+
+      font-family: "DM Sans", sans-serif;
+
+      line-height: 1.7;
+
+      overflow-x: hidden;
+    }
+
+
+    a {
+      color: inherit;
+
+      text-decoration: none;
+    }
+
+
+    button {
+      font: inherit;
+    }
+
+
+    img {
+      max-width: 100%;
+
+      display: block;
+    }
+
+
+    ::selection {
+      background: var(--rose);
+
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           SCROLLBAR
+           ===================================================== */
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream-dark);
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--rose);
+
+      border-radius: 20px;
+    }
+
+
+    /* =====================================================
+           LOADER
+           ===================================================== */
+
+    .page-loader {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 9999;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--cream);
+
+      transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+    }
+
+
+    .page-loader.hide {
+      opacity: 0;
+
+      visibility: hidden;
+    }
+
+
+    .loader-inner {
+      display: flex;
+
+      gap: 8px;
+    }
+
+
+    .loader-dot {
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: var(--rose);
+
+      animation: loaderBounce 0.8s infinite alternate;
+    }
+
+
+    .loader-dot:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+
+    .loader-dot:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+
+    @keyframes loaderBounce {
+
+      from {
+        transform: translateY(0);
+
+        opacity: 0.45;
+      }
+
+      to {
+        transform: translateY(-8px);
+
+        opacity: 1;
+      }
+    }
+
+
+    /* =====================================================
+           CONTAINER
+           ===================================================== */
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+
+      margin: 0 auto;
+    }
+
+
+    /* =====================================================
+           NAVBAR
+           ===================================================== */
+
+    .site-header {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 1000;
+
+      padding: 14px 0;
+
+      transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+
+    .site-header.scrolled {
+      background: rgba(255, 248, 240, 0.94);
+
+      backdrop-filter: blur(16px);
+
+      box-shadow:
+        0 5px 25px rgba(53, 35, 34, 0.07);
+    }
+
+
+    .navbar {
+      width: min(1240px, calc(100% - 40px));
+
+      min-height: 68px;
+
+      margin: auto;
+
+      padding: 10px 18px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+      border: 1px solid rgba(184, 74, 107, 0.08);
+
+      border-radius: 16px;
+
+      background: rgba(255, 248, 240, 0.82);
+
+      backdrop-filter: blur(15px);
+    }
+
+
+    /* Brand */
+
+    .brand-logo {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      flex-shrink: 0;
+    }
+
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--rose);
+
+      color: var(--cream);
+
+      font-size: 16px;
+
+      box-shadow:
+        0 8px 18px rgba(184, 74, 107, 0.22);
+    }
+
+
+    .brand-text {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+
+    .brand-text strong {
+      color: var(--cocoa);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.05rem;
+
+      letter-spacing: 0.04em;
+    }
+
+
+    .brand-text small {
+      margin-top: 1px;
+
+      color: var(--muted);
+
+      font-size: 0.55rem;
+
+      letter-spacing: 0.03em;
+    }
+
+
+    /* Navigation */
+
+    .nav-menu {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+    }
+
+
+    .nav-menu>a {
+      position: relative;
+
+      padding: 9px 12px;
+
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
+      font-weight: 600;
+
+      white-space: nowrap;
+
+      transition: color 0.25s ease;
+    }
+
+
+    .nav-menu>a:hover,
+    .nav-menu>a.active {
+      color: var(--rose);
+    }
+
+
+    .nav-menu>a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 12px;
+      right: 12px;
+
+      bottom: 2px;
+
+      height: 2px;
+
+      border-radius: 10px;
+
+      background: var(--rose);
+    }
+
+
+    .nav-order {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-left: 7px;
+
+      padding: 11px 17px !important;
+
+      border-radius: 10px;
+
+      background: var(--rose);
+
+      color: var(--white) !important;
+
+      box-shadow:
+        0 8px 18px rgba(184, 74, 107, 0.18);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+
+    .nav-order:hover {
+      transform: translateY(-2px);
+
+      background: var(--rose-dark);
+    }
+
+
+    .nav-order::after {
+      display: none !important;
+    }
+
+
+    /* Mobile button */
+
+    .menu-toggle {
+      display: none;
+
+      width: 43px;
+      height: 43px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      background: var(--white);
+
+      cursor: pointer;
+    }
+
+
+    .menu-toggle span {
+      display: block;
+
+      width: 19px;
+      height: 2px;
+
+      margin: 4px auto;
+
+      border-radius: 10px;
+
+      background: var(--cocoa);
+
+      transition: 0.25s ease;
+    }
+
+
+    /* =====================================================
+           PAGE HERO
+           ===================================================== */
+
+    .privacy-hero {
+      position: relative;
+
+      min-height: 390px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 145px 24px 85px;
+
+      overflow: hidden;
+
+      text-align: center;
+
+      background:
+        radial-gradient(circle at 15% 25%,
+          rgba(184, 74, 107, 0.11),
+          transparent 32%),
+        radial-gradient(circle at 85% 70%,
+          rgba(201, 164, 92, 0.12),
+          transparent 30%),
+        var(--cream);
+    }
+
+
+    .privacy-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      top: -150px;
+      left: -80px;
+
+      border-radius: 50%;
+
+      background: rgba(184, 74, 107, 0.06);
+
+      animation: heroFloat 8s ease-in-out infinite;
+    }
+
+
+    .privacy-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      right: -90px;
+      bottom: -100px;
+
+      border-radius: 50%;
+
+      background: rgba(201, 164, 92, 0.09);
+
+      animation: heroFloat 9s ease-in-out infinite reverse;
+    }
+
+
+    @keyframes heroFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-16px);
+      }
+    }
+
+
+    .privacy-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+
+    .privacy-eyebrow {
+      display: inline-block;
+
+      margin-bottom: 16px;
+
+      color: var(--rose);
+
+      font-size: 0.7rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+    }
+
+
+    .privacy-hero h1 {
+      color: var(--cocoa);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(3rem, 7vw, 5.5rem);
+
+      font-weight: 600;
+
+      line-height: 1;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .privacy-hero h1 em {
+      color: var(--rose);
+
+      font-style: italic;
+    }
+
+
+    .privacy-hero p {
+      max-width: 620px;
+
+      margin: 22px auto 0;
+
+      color: var(--muted);
+
+      font-size: 0.95rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           PRIVACY CONTENT
+           ===================================================== */
+
+    .privacy-section {
+      padding: 100px 0 110px;
+
+      background: var(--cream);
+    }
+
+
+    .privacy-layout {
+      display: grid;
+
+      grid-template-columns: 260px minmax(0, 1fr);
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+
+    /* Side navigation */
+
+    .privacy-sidebar {
+      position: sticky;
+
+      top: 115px;
+
+      padding: 25px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: rgba(255, 255, 255, 0.65);
+
+      box-shadow:
+        0 10px 30px rgba(53, 35, 34, 0.04);
+    }
+
+
+    .privacy-sidebar-title {
+      margin-bottom: 15px;
+
+      color: var(--cocoa);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.1rem;
+
+      font-weight: 600;
+    }
+
+
+    .privacy-sidebar a {
+      display: block;
+
+      padding: 7px 0;
+
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
+      border-bottom: 1px solid rgba(184, 74, 107, 0.07);
+
+      transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+    }
+
+
+    .privacy-sidebar a:last-child {
+      border-bottom: none;
+    }
+
+
+    .privacy-sidebar a:hover {
+      padding-left: 5px;
+
+      color: var(--rose);
+    }
+
+
+    /* Main document */
+
+    .privacy-content {
+      min-width: 0;
+
+      padding: 48px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 22px;
+
+      background: var(--white);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .last-updated {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 30px;
+
+      padding: 8px 13px;
+
+      border-radius: 30px;
+
+      background: var(--soft-rose);
+
+      color: var(--rose-dark);
+
+      font-size: 0.7rem;
+
+      font-weight: 700;
+    }
+
+
+    .privacy-content section {
+      scroll-margin-top: 110px;
+
+      margin-bottom: 48px;
+    }
+
+
+    .privacy-content section:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .privacy-content h2 {
+      margin-bottom: 14px;
+
+      color: var(--cocoa);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.7rem;
+
+      font-weight: 600;
+
+      line-height: 1.2;
+    }
+
+
+    .privacy-content h2::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 7px;
+      height: 7px;
+
+      margin: 0 10px 4px 0;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+    }
+
+
+    .privacy-content p {
+      margin-bottom: 14px;
+
+      color: var(--muted);
+
+      font-size: 0.91rem;
+
+      line-height: 1.85;
+    }
+
+
+    .privacy-content ul {
+      margin: 12px 0 0;
+
+      padding-left: 22px;
+    }
+
+
+    .privacy-content li {
+      margin-bottom: 9px;
+
+      padding-left: 4px;
+
+      color: var(--muted);
+
+      font-size: 0.9rem;
+
+      line-height: 1.75;
+    }
+
+
+    .privacy-content li::marker {
+      color: var(--rose);
+    }
+
+
+    .privacy-content strong {
+      color: var(--cocoa);
+
+      font-weight: 700;
+    }
+
+
+    .privacy-content a {
+      color: var(--rose);
+
+      font-weight: 600;
+
+      text-decoration: underline;
+
+      text-decoration-color: rgba(184, 74, 107, 0.25);
+
+      text-underline-offset: 3px;
+    }
+
+
+    .privacy-content a:hover {
+      color: var(--rose-dark);
+    }
+
+
+    /* =====================================================
+           CONTACT BOX
+           ===================================================== */
+
+    .privacy-contact-box {
+      margin-top: 35px;
+
+      padding: 27px;
+
+      border: 1px solid rgba(201, 164, 92, 0.25);
+
+      border-radius: 16px;
+
+      background:
+        linear-gradient(135deg,
+          #fff8f0,
+          #f7ede3);
+    }
+
+
+    .privacy-contact-box h3 {
+      margin-bottom: 7px;
+
+      color: var(--cocoa);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.25rem;
+    }
+
+
+    .privacy-contact-box p {
+      margin-bottom: 0;
+    }
+
+
+    .privacy-contact-box a {
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+           FOOTER
+           ===================================================== */
+
+    .site-footer {
+      position: relative;
+
+      padding-top: 75px;
+
+      background: var(--cocoa);
+
+      color: var(--cream);
+
+      overflow: hidden;
+    }
+
+
+    .site-footer::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      right: -120px;
+      top: -150px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(201, 164, 92, 0.15);
+    }
+
+
+    .footer-main {
+      position: relative;
+
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns: 1.6fr 0.8fr 0.8fr 1fr;
+
+      gap: 45px;
+
+      padding-bottom: 60px;
+    }
+
+
+    .footer-brand .brand-logo {
+      margin-bottom: 20px;
+    }
+
+
+    .footer-brand .brand-text strong {
+      color: var(--cream);
+    }
+
+
+    .footer-brand .brand-text small {
+      color: rgba(255, 248, 240, 0.55);
+    }
+
+
+    .footer-brand p {
+      max-width: 350px;
+
+      color: rgba(255, 248, 240, 0.62);
+
+      font-size: 0.84rem;
+
+      line-height: 1.8;
+    }
+
+
+    .footer-socials {
+      display: flex;
+
+      gap: 9px;
+
+      margin-top: 22px;
+    }
+
+
+    .footer-socials a {
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(255, 248, 240, 0.15);
+
+      border-radius: 50%;
+
+      color: var(--cream);
+
+      font-size: 0.78rem;
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+
+    .footer-socials a:hover {
+      transform: translateY(-3px);
+
+      border-color: var(--rose);
+
+      background: var(--rose);
+    }
+
+
+    .footer-column h3 {
+      margin-bottom: 20px;
+
+      color: var(--cream);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.05rem;
+
+      font-weight: 600;
+    }
+
+
+    .footer-column>a,
+    .footer-column>span {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      width: fit-content;
+
+      margin-bottom: 11px;
+
+      color: rgba(255, 248, 240, 0.60);
+
+      font-size: 0.78rem;
+
+      line-height: 1.5;
+
+      transition: color 0.25s ease;
+    }
+
+
+    .footer-column>a:hover {
+      color: var(--cream);
+    }
+
+
+    .footer-contact i {
+      width: 16px;
+
+      color: var(--gold);
+
+      text-align: center;
+    }
+
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 248, 240, 0.09);
+    }
+
+
+    .footer-bottom .container {
+      min-height: 65px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+
+    .footer-bottom p,
+    .footer-bottom span {
+      color: rgba(255, 248, 240, 0.42);
+
+      font-size: 0.7rem;
+    }
+
+
+    .footer-bottom i {
+      color: var(--rose);
+    }
+
+
+    /* =====================================================
+           WHATSAPP
+           ===================================================== */
+
+    .whatsapp-btn {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 900;
+
+      width: 54px;
+      height: 54px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--rose);
+
+      color: var(--white);
+
+      font-size: 1.35rem;
+
+      box-shadow:
+        0 12px 30px rgba(184, 74, 107, 0.30);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .whatsapp-btn:hover {
+      transform: translateY(-5px) scale(1.04);
+
+      background: var(--rose-dark);
+    }
+
+
+    /* =====================================================
+           REVEAL
+           ===================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+
+    .reveal.show {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+           TABLET
+           ===================================================== */
+
+    @media (max-width: 1050px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+
+      .nav-menu {
+        position: fixed;
+
+        top: 92px;
+
+        left: 20px;
+        right: 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        padding: 15px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        background: rgba(255, 248, 240, 0.98);
+
+        box-shadow:
+          0 20px 50px rgba(53, 35, 34, 0.12);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease,
+          transform 0.25s ease;
+      }
+
+
+      .nav-menu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+
+      .nav-menu>a {
+        width: 100%;
+
+        padding: 12px 14px;
+      }
+
+
+      .nav-menu>a.active::after {
+        display: none;
+      }
+
+
+      .nav-order {
+        justify-content: center;
+
+        margin: 7px 0 0;
+      }
+
+
+      .privacy-layout {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .privacy-sidebar {
+        position: static;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 5px 15px;
+      }
+
+
+      .privacy-sidebar-title {
+        width: 100%;
+
+        margin-bottom: 5px;
+      }
+
+
+      .privacy-sidebar a {
+        border-bottom: none;
+      }
+
+
+      .footer-main {
+        grid-template-columns: 1.4fr 1fr 1fr;
+
+        gap: 35px;
+      }
+
+
+      .footer-contact {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+    /* =====================================================
+           MOBILE
+           ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: min(100% - 34px, 1180px);
+      }
+
+
+      .navbar {
+        width: calc(100% - 24px);
+
+        padding: 9px 12px;
+      }
+
+
+      .brand-text small {
+        display: none;
+      }
+
+
+      .privacy-hero {
+        min-height: 340px;
+
+        padding:
+          125px 20px 70px;
+      }
+
+
+      .privacy-hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem);
+      }
+
+
+      .privacy-hero p {
+        font-size: 0.88rem;
+      }
+
+
+      .privacy-section {
+        padding: 70px 0 80px;
+      }
+
+
+      .privacy-sidebar {
+        padding: 20px;
+      }
+
+
+      .privacy-content {
+        padding: 30px 22px;
+
+        border-radius: 17px;
+      }
+
+
+      .privacy-content h2 {
+        font-size: 1.45rem;
+      }
+
+
+      .privacy-content p,
+      .privacy-content li {
+        font-size: 0.87rem;
+      }
+
+
+      .privacy-contact-box {
+        padding: 22px;
+      }
+
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding-bottom: 45px;
+      }
+
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+
+      .footer-contact {
+        grid-column: 1 / -1;
+      }
+
+
+      .footer-bottom .container {
+        min-height: auto;
+
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+      }
+
+
+      .whatsapp-btn {
+        right: 16px;
+        bottom: 16px;
+
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+
+    /* =====================================================
+           SMALL MOBILE
+           ===================================================== */
+
+    @media (max-width: 400px) {
+
+      .brand-text strong {
+        font-size: 0.9rem;
+      }
+
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+
+      .privacy-hero h1 {
+        font-size: 2.5rem;
+      }
+
+
+      .privacy-content {
+        padding: 25px 18px;
+      }
+
+
+      .privacy-sidebar {
+        display: block;
+      }
+
+
+      .privacy-sidebar a {
+        padding: 6px 0;
+      }
+
+
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-brand,
+      .footer-contact {
+        grid-column: auto;
+      }
+    }
+
+
+    /* =====================================================
+           REDUCED MOTION
+           ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+      }
+
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+         PAGE LOADER
+         ===================================================== -->
+
+  <div class="page-loader">
+
+    <div class="loader-inner">
+
+      <span class="loader-dot"></span>
+
+      <span class="loader-dot"></span>
+
+      <span class="loader-dot"></span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+  <header class="site-header" id="header">
+
+    <nav class="navbar">
+
+      <a href="index.html" class="brand">
+
+        <span class="brand-icon">
+          <i class="fa-solid fa-cake-candles"></i>
+        </span>
+
+        <span class="brand-text">
+          <strong>VELVET WHISK</strong>
+          <small>CRAFTED WITH LOVE</small>
+        </span>
+
+      </a>
+
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="cakes.html">Cakes</a>
+
+        <a href="custom-cakes.html">Custom Cakes</a>
+
+        <a href="about.html">About</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+
+      <a href="custom-cakes.html" class="nav-order-btn">
+        Order a Cake
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+  <main>
+
+
+    <!-- =================================================
+             PRIVACY HERO
+             ================================================= -->
+
+    <section class="privacy-hero">
+
+      <div class="privacy-hero-content reveal">
+
+        <span class="privacy-eyebrow">
+          YOUR PRIVACY MATTERS
+        </span>
+
+        <h1>
+          Privacy <em>Policy.</em>
+        </h1>
+
+        <p>
+          We value your trust and are committed to
+          handling your information with care,
+          transparency and respect.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             PRIVACY CONTENT
+             ================================================= -->
+
+    <section class="privacy-section">
+
+      <div class="container">
+
+        <div class="privacy-layout">
+
+
+          <!-- SIDEBAR -->
+
+          <aside class="privacy-sidebar reveal">
+
+            <div class="privacy-sidebar-title">
+              On this page
+            </div>
+
+            <a href="#introduction">
+              Introduction
+            </a>
+
+            <a href="#information">
+              Information We Collect
+            </a>
+
+            <a href="#usage">
+              How We Use Information
+            </a>
+
+            <a href="#sharing">
+              Information Sharing
+            </a>
+
+            <a href="#cookies">
+              Cookies
+            </a>
+
+            <a href="#security">
+              Data Security
+            </a>
+
+            <a href="#rights">
+              Your Rights
+            </a>
+
+            <a href="#changes">
+              Policy Changes
+            </a>
+
+            <a href="#contact">
+              Contact Us
+            </a>
+
+          </aside>
+
+
+          <!-- DOCUMENT -->
+
+          <article class="privacy-content reveal">
+
+            <div class="last-updated">
+
+              <i class="fa-regular fa-calendar"></i>
+
+              Last Updated: September 2026
+
+            </div>
+
+
+            <!-- INTRODUCTION -->
+
+            <section id="introduction">
+
+              <h2>
+                Introduction
+              </h2>
+
+              <p>
+                Welcome to Velvet Whisk. We respect
+                your privacy and are committed to
+                protecting the personal information
+                you choose to share with us.
+              </p>
+
+              <p>
+                This Privacy Policy explains what
+                information we may collect, how we
+                use it, and the choices you have when
+                interacting with Velvet Whisk through
+                our website, enquiry forms and
+                communication channels.
+              </p>
+
+            </section>
+
+
+            <!-- INFORMATION -->
+
+            <section id="information">
+
+              <h2>
+                Information We Collect
+              </h2>
+
+              <p>
+                Depending on how you interact with
+                Velvet Whisk, we may receive
+                information such as:
+              </p>
+
+              <ul>
+
+                <li>
+                  Your name and contact details.
+                </li>
+
+                <li>
+                  Email address and phone number.
+                </li>
+
+                <li>
+                  Cake preferences and order
+                  requirements.
+                </li>
+
+                <li>
+                  Celebration dates and occasion
+                  details that you choose to provide.
+                </li>
+
+                <li>
+                  Messages or other information
+                  you submit through enquiry forms.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- USAGE -->
+
+            <section id="usage">
+
+              <h2>
+                How We Use Your Information
+              </h2>
+
+              <p>
+                Information provided to Velvet Whisk
+                may be used to:
+              </p>
+
+              <ul>
+
+                <li>
+                  Respond to enquiries and questions.
+                </li>
+
+                <li>
+                  Discuss cake orders and custom
+                  cake requirements.
+                </li>
+
+                <li>
+                  Communicate with you about your
+                  enquiry or order.
+                </li>
+
+                <li>
+                  Provide information about our
+                  products and services when
+                  appropriate.
+                </li>
+
+                <li>
+                  Improve our website and customer
+                  experience.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- SHARING -->
+
+            <section id="sharing">
+
+              <h2>
+                Information Sharing
+              </h2>
+
+              <p>
+                Velvet Whisk does not intend to sell
+                your personal information.
+              </p>
+
+              <p>
+                Information may be shared only when
+                reasonably necessary to operate our
+                services, respond to your request,
+                comply with applicable legal
+                requirements, or protect our rights
+                and customers.
+              </p>
+
+            </section>
+
+
+            <!-- COOKIES -->
+
+            <section id="cookies">
+
+              <h2>
+                Cookies
+              </h2>
+
+              <p>
+                Our website may use basic browser
+                technologies such as cookies or
+                similar mechanisms to improve website
+                functionality and user experience.
+              </p>
+
+              <p>
+                Your browser may allow you to control
+                or disable cookies through its settings.
+                Disabling certain cookies may affect
+                some website functionality.
+              </p>
+
+            </section>
+
+
+            <!-- SECURITY -->
+
+            <section id="security">
+
+              <h2>
+                Data Security
+              </h2>
+
+              <p>
+                We take reasonable steps to protect
+                information provided to us from
+                unauthorized access, misuse or
+                disclosure.
+              </p>
+
+              <p>
+                However, no method of transmitting or
+                storing information online can be
+                guaranteed to be completely secure.
+              </p>
+
+            </section>
+
+
+            <!-- RIGHTS -->
+
+            <section id="rights">
+
+              <h2>
+                Your Rights
+              </h2>
+
+              <p>
+                Depending on applicable law, you may
+                have rights concerning the personal
+                information you provide, including
+                requesting access, correction or
+                deletion where applicable.
+              </p>
+
+              <p>
+                If you have a privacy-related request,
+                please contact us using the details
+                provided below.
+              </p>
+
+            </section>
+
+
+            <!-- CHANGES -->
+
+            <section id="changes">
+
+              <h2>
+                Changes to This Policy
+              </h2>
+
+              <p>
+                Velvet Whisk may update this Privacy
+                Policy from time to time to reflect
+                changes to our services, website or
+                applicable requirements.
+              </p>
+
+              <p>
+                Any updated version will be posted on
+                this page with a revised "Last Updated"
+                date.
+              </p>
+
+            </section>
+
+
+            <!-- CONTACT -->
+
+            <section id="contact">
+
+              <h2>
+                Contact Us
+              </h2>
+
+              <p>
+                If you have any questions about this
+                Privacy Policy or how your information
+                is handled, please contact Velvet Whisk.
+              </p>
+
+
+              <div class="privacy-contact-box">
+
+                <h3>
+                  Velvet Whisk
+                </h3>
+
+                <p>
+
+                  <strong>Email:</strong>
+
+                  <a href="mailto:hello@velvetwhisk.com">
+                    hello@velvetwhisk.com
+                  </a>
+
+                  <br>
+
+                  <strong>Phone:</strong>
+
+                  <a href="tel:+919876543210">
+                    +91 98765 43210
+                  </a>
+
+                </p>
+
+              </div>
+
+            </section>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="brand-logo">
+
+          <span class="brand-mark">
+            <i class="fa-solid fa-cake-candles"></i>
+          </span>
+
+          <span class="brand-text">
+            <strong>VELVET WHISK</strong>
+            <small>Crafted for Your Sweetest Moments.</small>
+          </span>
+
+        </a>
+
+        <p>
+          Handcrafted cakes, thoughtful details and
+          unforgettable sweetness for every celebration.
+        </p>
+
+        <div class="social-links">
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Explore</h4>
+
+        <a href="index.html">Home</a><br>
+        <a href="cakes.html">Cakes</a><br>
+        <a href="custom-cakes.html">Custom Cakes</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="gallery.html">Gallery</a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Help</h4>
+
+        <a href="contact.html">Contact</a><br>
+        <a href="privacy.html">Privacy Policy</a><br>
+        <a href="terms.html">Terms & Conditions</a><br>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <h4>Get in Touch</h4>
+
+        <a href="mailto:hello@velvetwhisk.com">
+          <i class="fa-regular fa-envelope"></i>
+          hello@velvetwhisk.com
+        </a>
+        <br>
+        <a href="tel:+919876543210">
+          <i class="fa-solid fa-phone"></i>
+          +91 98765 43210
+        </a>
+        <br>
+        <span>
+          <i class="fa-regular fa-clock"></i>
+          Mon – Sat · 10 AM – 8 PM
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © <span id="currentYear"></span>
+        Velvet Whisk. All rights reserved.
+      </p>
+
+      <p>
+        Made with <span>♥</span> for sweet moments.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         WHATSAPP
+         ===================================================== -->
+
+  <a href="https://wa.me/919876543210?text=Hello%20Velvet%20Whisk!%20I%20would%20like%20to%20know%20more%20about%20your%20cakes."
+    class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with Velvet Whisk on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+
+  <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+      /* =================================================
+         PAGE LOADER
+         ================================================= */
+
+      const loader = document.querySelector(".page-loader");
+
+      window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+          if (loader) {
+            loader.classList.add("hide");
+          }
+
+        }, 350);
+
+      });
+
+
+      /* =================================================
+         HEADER SCROLL
+         ================================================= */
+
+      const header = document.getElementById("header");
+
+      function updateHeader() {
+
+        if (!header) return;
+
+        if (window.scrollY > 30) {
+
+          header.classList.add("scrolled");
+
+        } else {
+
+          header.classList.remove("scrolled");
+
+        }
+
+      }
+
+
+      window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+      );
+
+      updateHeader();
+
+
+      /* =================================================
+         MOBILE NAVIGATION
+         ================================================= */
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const navLinks =
+        document.getElementById("navLinks");
+
+
+      if (menuToggle && navLinks) {
+
+        menuToggle.addEventListener("click", function () {
+
+          const isOpen =
+            navLinks.classList.toggle("active");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+        });
+
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          });
+
+        });
+
+      }
+
+
+      /* =================================================
+         ACTIVE NAVIGATION
+         ================================================= */
+
+      const currentPage =
+        window.location.pathname
+          .split("/")
+          .pop()
+          .toLowerCase();
+
+
+      document
+        .querySelectorAll(".nav-menu > a")
+        .forEach(function (link) {
+
+          const href =
+            link.getAttribute("href");
+
+          if (!href) return;
+
+          const linkPage =
+            href.split("/")
+              .pop()
+              .toLowerCase();
+
+          link.classList.remove("active");
+
+          if (
+            linkPage === currentPage &&
+            linkPage !== "custom-cakes.html"
+          ) {
+            link.classList.add("active");
+          }
+
+        });
+
+
+      /* =================================================
+         SCROLL REVEAL
+         ================================================= */
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver =
+          new IntersectionObserver(
+            function (entries, observer) {
+
+              entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add("show");
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              });
+
+            },
+            {
+              threshold: 0.12
+            }
+          );
+
+
+        revealElements.forEach(function (element) {
+
+          revealObserver.observe(element);
+
+        });
+
+      } else {
+
+        revealElements.forEach(function (element) {
+
+          element.classList.add("show");
+
+        });
+
+      }
+
+
+      /* =================================================
+         SMOOTH ANCHOR SCROLL
+         ================================================= */
+
+      document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (link) {
+
+          link.addEventListener(
+            "click",
+            function (event) {
+
+              const targetId =
+                link.getAttribute("href");
+
+              if (
+                !targetId ||
+                targetId === "#"
+              ) {
+                return;
+              }
+
+
+              const target =
+                document.querySelector(
+                  targetId
+                );
+
+
+              if (!target) return;
+
+
+              event.preventDefault();
+
+
+              const headerHeight =
+                header
+                  ? header.offsetHeight
+                  : 0;
+
+
+              const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight -
+                20;
+
+
+              window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+              });
+
+            }
+          );
+
+        });
+
+
+      /* =================================================
+         CURRENT YEAR
+         ================================================= */
+
+      const year =
+        document.getElementById("currentYear");
+
+
+      if (year) {
+
+        year.textContent =
+          new Date().getFullYear();
+
+      }
+
+
+      /* =================================================
+         ESCAPE KEY
+         ================================================= */
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+
+          if (
+            event.key === "Escape" &&
+            navLinks
+          ) {
+
+            navLinks.classList.remove("active");
+
+            if (menuToggle) {
+
+              menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+            }
+
+          }
+
+        }
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>

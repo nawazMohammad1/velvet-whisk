@@ -1,0 +1,962 @@
+/* =========================================================
+   VELVET WHISK
+   CUSTOM CAKES PAGE
+   custom-cakes.css
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.custom-page {
+  background: var(--cream);
+}
+
+/* =========================================================
+   CUSTOM HERO
+========================================================= */
+
+.custom-hero {
+  min-height: 78vh;
+  padding: 150px 6% 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 70px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(201, 164, 92, 0.12),
+      transparent 30%
+    ),
+    var(--cream);
+
+  overflow: hidden;
+}
+
+/* Hero content */
+
+.custom-hero-content {
+  max-width: 650px;
+}
+
+.custom-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--rose);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 20px;
+}
+
+.custom-eyebrow::before {
+  content: "";
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--gold);
+}
+
+/* Hero heading */
+
+.custom-hero h1 {
+  margin: 0 0 22px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1.02;
+}
+
+.custom-hero h1 em {
+  color: var(--rose);
+
+  font-style: italic;
+}
+
+/* Hero description */
+
+.custom-hero-description {
+  max-width: 570px;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+
+  line-height: 1.85;
+
+  margin-bottom: 32px;
+}
+
+/* Hero buttons */
+
+.custom-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.custom-hero-image {
+  position: relative;
+
+  min-height: 550px;
+}
+
+.custom-main-image {
+  width: 100%;
+  height: 550px;
+
+  object-fit: cover;
+
+  border-radius: 180px 180px 18px 18px;
+
+  box-shadow: 0 30px 70px rgba(53, 35, 34, 0.16);
+}
+
+/* Floating image card */
+
+.custom-image-card {
+  position: absolute;
+
+  left: -35px;
+  bottom: 35px;
+
+  width: 210px;
+
+  padding: 22px;
+
+  background: rgba(255, 248, 240, 0.96);
+
+  border: 1px solid rgba(201, 164, 92, 0.35);
+
+  border-radius: 16px;
+
+  box-shadow: 0 18px 45px rgba(53, 35, 34, 0.15);
+}
+
+.custom-image-card i {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  background: var(--cocoa);
+}
+
+.custom-image-card strong {
+  display: block;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.15rem;
+
+  margin-bottom: 5px;
+}
+
+.custom-image-card span {
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CUSTOM INTRO
+========================================================= */
+
+.custom-intro {
+  padding: 100px 6%;
+
+  text-align: center;
+
+  background: #fff;
+}
+
+.custom-intro-inner {
+  max-width: 780px;
+
+  margin: auto;
+}
+
+.custom-intro h2 {
+  margin: 12px 0 18px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.custom-intro h2 em {
+  color: var(--rose);
+
+  font-style: italic;
+}
+
+.custom-intro p {
+  color: var(--muted);
+
+  line-height: 1.9;
+
+  font-size: 1rem;
+}
+
+/* =========================================================
+   CUSTOMIZATION OPTIONS
+========================================================= */
+
+.custom-options {
+  padding: 100px 6%;
+
+  background: var(--cream);
+}
+
+.custom-section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.custom-section-heading > span {
+  color: var(--rose);
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.custom-section-heading h2 {
+  margin: 12px 0 15px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+}
+
+.custom-section-heading p {
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+/* Options grid */
+
+.options-grid {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* Option card */
+
+.option-card {
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border: 1px solid rgba(53, 35, 34, 0.08);
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(184, 74, 107, 0.25);
+
+  box-shadow: 0 20px 45px rgba(53, 35, 34, 0.1);
+}
+
+/* Option icon */
+
+.option-icon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  color: var(--rose);
+
+  background: var(--soft-rose);
+
+  font-size: 1.35rem;
+}
+
+.option-card h3 {
+  margin-bottom: 10px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.35rem;
+}
+
+.option-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   INSPIRATION
+========================================================= */
+
+.custom-inspiration {
+  padding: 100px 6%;
+
+  background: #fff;
+}
+
+.inspiration-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+/* Inspiration card */
+
+.inspiration-card {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 450px;
+
+  border-radius: 18px;
+}
+
+.inspiration-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.inspiration-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Inspiration overlay */
+
+.inspiration-overlay {
+  position: absolute;
+
+  inset: auto 0 0;
+
+  padding: 60px 25px 25px;
+
+  color: #fff;
+
+  background: linear-gradient(to top, rgba(53, 35, 34, 0.82), transparent);
+}
+
+.inspiration-overlay h3 {
+  margin: 0 0 5px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.5rem;
+}
+
+.inspiration-overlay p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.custom-process {
+  padding: 100px 6%;
+
+  background: var(--cream-dark);
+}
+
+.process-grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.process-step {
+  position: relative;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+.process-number {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 20px;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.2rem;
+
+  background: #fff;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.25rem;
+}
+
+.process-step p {
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ORDER SECTION
+========================================================= */
+
+.custom-order {
+  padding: 110px 6%;
+
+  background: #fff;
+}
+
+.order-wrapper {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+/* Order information */
+
+.order-info {
+  position: sticky;
+
+  top: 120px;
+}
+
+.order-info h2 {
+  margin: 12px 0 18px;
+
+  color: var(--cocoa);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+
+  line-height: 1.1;
+}
+
+.order-info > p {
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+/* Order note */
+
+.order-note {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 18px;
+
+  background: var(--cream);
+
+  border-left: 3px solid var(--gold);
+
+  border-radius: 8px;
+}
+
+.order-note i {
+  color: var(--gold);
+
+  margin-top: 3px;
+}
+
+.order-note p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CUSTOM FORM
+========================================================= */
+
+.custom-form {
+  padding: 35px;
+
+  background: var(--cream);
+
+  border: 1px solid rgba(53, 35, 34, 0.08);
+
+  border-radius: 20px;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--cocoa);
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid rgba(53, 35, 34, 0.15);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: var(--cocoa);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+  min-height: 125px;
+
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--rose);
+
+  box-shadow: 0 0 0 3px rgba(184, 74, 107, 0.08);
+}
+
+.form-submit {
+  width: 100%;
+
+  margin-top: 5px;
+}
+
+/* =========================================================
+   WHATSAPP CTA
+========================================================= */
+
+.custom-whatsapp {
+  padding: 80px 6%;
+
+  background: var(--cocoa);
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.custom-whatsapp::before,
+.custom-whatsapp::after {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  border: 1px solid rgba(201, 164, 92, 0.25);
+
+  border-radius: 50%;
+}
+
+.custom-whatsapp::before {
+  top: -120px;
+  left: -80px;
+}
+
+.custom-whatsapp::after {
+  right: -90px;
+  bottom: -140px;
+}
+
+.custom-whatsapp-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+
+  margin: auto;
+}
+
+.custom-whatsapp h2 {
+  margin-bottom: 15px;
+
+  color: var(--cream);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.custom-whatsapp p {
+  margin-bottom: 28px;
+
+  color: rgba(255, 248, 240, 0.72);
+
+  line-height: 1.8;
+}
+
+.whatsapp-custom-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 15px 25px;
+
+  border-radius: 8px;
+
+  background: var(--gold);
+
+  color: var(--cocoa);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.whatsapp-custom-btn:hover {
+  transform: translateY(-3px);
+
+  background: #d8b976;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .custom-hero {
+    grid-template-columns: 1fr;
+
+    padding-top: 130px;
+
+    text-align: center;
+  }
+
+  .custom-hero-content {
+    max-width: 800px;
+
+    margin: auto;
+  }
+
+  .custom-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .custom-eyebrow {
+    justify-content: center;
+  }
+
+  .custom-hero-buttons {
+    justify-content: center;
+  }
+
+  .custom-hero-image {
+    max-width: 700px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 35px;
+  }
+
+  .order-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .order-info {
+    position: static;
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+  }
+
+  .order-note {
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+  .custom-hero {
+    padding: 120px 5% 70px;
+
+    gap: 45px;
+  }
+
+  .custom-main-image {
+    height: 450px;
+  }
+
+  .custom-image-card {
+    left: 15px;
+
+    bottom: 20px;
+  }
+
+  .inspiration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiration-card {
+    height: 400px;
+  }
+
+  .custom-form {
+    padding: 25px 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .custom-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .custom-hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .custom-hero-buttons .btn {
+    width: 100%;
+  }
+
+  .custom-main-image {
+    height: 390px;
+
+    border-radius: 120px 120px 15px 15px;
+  }
+
+  .custom-image-card {
+    width: 175px;
+
+    padding: 16px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .custom-intro,
+  .custom-options,
+  .custom-inspiration,
+  .custom-process,
+  .custom-order {
+    padding-top: 75px;
+
+    padding-bottom: 75px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .custom-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .custom-image-card {
+    display: none;
+  }
+
+  .custom-form {
+    padding: 20px 15px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .option-card,
+  .inspiration-card img,
+  .whatsapp-custom-btn {
+    transition: none;
+  }
+}

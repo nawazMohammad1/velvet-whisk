@@ -1,0 +1,1342 @@
+/* =========================================================
+   VELVET WHISK
+   Cakes Page Styles
+   File: css/cakes.css
+========================================================= */
+
+/* =========================================================
+   CAKES HERO
+========================================================= */
+
+.cakes-hero {
+  min-height: 78vh;
+  padding: 150px 7% 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 80px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(239, 211, 217, 0.45),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #fff8f0 0%, #fffaf6 50%, #f7ede3 100%);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background circles */
+
+.cakes-hero::before {
+  content: "";
+  width: 280px;
+  height: 280px;
+
+  position: absolute;
+  left: -120px;
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(184, 74, 107, 0.08);
+
+  pointer-events: none;
+}
+
+.cakes-hero::after {
+  content: "";
+  width: 360px;
+  height: 360px;
+
+  position: absolute;
+  right: -180px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 164, 92, 0.2);
+
+  pointer-events: none;
+}
+
+/* Hero content */
+
+.cakes-hero-content {
+  max-width: 650px;
+
+  position: relative;
+  z-index: 2;
+
+  animation: cakesHeroContent 0.9s ease both;
+}
+
+@keyframes cakesHeroContent {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cakes-hero-content h1 {
+  margin: 18px 0 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(3rem, 5vw, 5.4rem);
+
+  line-height: 1.03;
+  letter-spacing: -2px;
+
+  color: #352322;
+}
+
+.cakes-hero-content h1 em {
+  color: #b84a6b;
+  font-style: italic;
+}
+
+.cakes-hero-content p {
+  max-width: 580px;
+
+  margin-bottom: 34px;
+
+  color: #806f6b;
+
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+/* Hero buttons */
+
+.cakes-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Hero visual */
+
+.cakes-hero-visual {
+  position: relative;
+
+  max-width: 560px;
+  width: 100%;
+
+  justify-self: end;
+
+  animation: cakesHeroImage 1s 0.15s ease both;
+}
+
+@keyframes cakesHeroImage {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.cakes-hero-image {
+  width: 100%;
+  aspect-ratio: 0.88;
+
+  overflow: hidden;
+
+  border-radius: 220px 220px 24px 24px;
+
+  box-shadow:
+    0 30px 70px rgba(53, 35, 34, 0.18),
+    0 8px 20px rgba(53, 35, 34, 0.08);
+
+  position: relative;
+}
+
+.cakes-hero-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(53, 35, 34, 0.02),
+    rgba(53, 35, 34, 0.18)
+  );
+
+  pointer-events: none;
+}
+
+.cakes-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.cakes-hero-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Hero badge */
+
+.hero-badge {
+  position: absolute;
+
+  left: -32px;
+  bottom: 35px;
+
+  width: 125px;
+  height: 125px;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #fff8f0;
+
+  border: 1px solid rgba(201, 164, 92, 0.45);
+
+  box-shadow: 0 15px 35px rgba(53, 35, 34, 0.14);
+
+  z-index: 3;
+
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-badge span {
+  font-family: "Playfair Display", serif;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: #b84a6b;
+
+  line-height: 1;
+}
+
+.hero-badge small {
+  margin-top: 6px;
+
+  color: #806f6b;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   FILTER SECTION
+========================================================= */
+
+.cake-filter-section {
+  padding: 100px 7% 35px;
+
+  background: #fff8f0;
+}
+
+.cake-filter-section .section-heading {
+  max-width: 720px;
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.cake-filter-section .section-heading h2 {
+  margin: 12px 0 14px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+
+  line-height: 1.12;
+
+  color: #352322;
+}
+
+.cake-filter-section .section-heading h2 em {
+  color: #b84a6b;
+  font-style: italic;
+}
+
+.cake-filter-section .section-heading p {
+  max-width: 590px;
+  margin: auto;
+
+  color: #806f6b;
+
+  line-height: 1.8;
+}
+
+/* Filter buttons */
+
+.cake-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  max-width: 900px;
+  margin: auto;
+
+  flex-wrap: wrap;
+}
+
+.cake-filter {
+  border: 1px solid rgba(184, 74, 107, 0.18);
+
+  background: #ffffff;
+
+  color: #806f6b;
+
+  padding: 12px 22px;
+
+  border-radius: 100px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cake-filter:hover {
+  color: #b84a6b;
+
+  border-color: rgba(184, 74, 107, 0.4);
+
+  transform: translateY(-2px);
+}
+
+.cake-filter.active {
+  color: #ffffff;
+
+  background: #b84a6b;
+
+  border-color: #b84a6b;
+
+  box-shadow: 0 8px 22px rgba(184, 74, 107, 0.2);
+}
+
+/* =========================================================
+   CAKE COLLECTION
+========================================================= */
+
+.cake-collection {
+  padding: 50px 7% 110px;
+
+  background: #fff8f0;
+}
+
+.cake-grid {
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+/* =========================================================
+   CAKE CARD
+========================================================= */
+
+.cake-card {
+  background: #ffffff;
+
+  border: 1px solid rgba(53, 35, 34, 0.07);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 30px rgba(53, 35, 34, 0.055);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-9px);
+
+  border-color: rgba(184, 74, 107, 0.18);
+
+  box-shadow: 0 24px 55px rgba(53, 35, 34, 0.12);
+}
+
+/* Cake image */
+
+.cake-image {
+  width: 100%;
+
+  aspect-ratio: 1 / 0.82;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #f7ede3;
+}
+
+.cake-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(180deg, transparent 60%, rgba(53, 35, 34, 0.1));
+
+  pointer-events: none;
+}
+
+.cake-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.cake-card:hover .cake-image img {
+  transform: scale(1.07);
+}
+
+/* Cake tag */
+
+.cake-tag {
+  position: absolute;
+
+  left: 16px;
+  top: 16px;
+
+  padding: 7px 12px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 248, 240, 0.94);
+
+  color: #963b57;
+
+  border: 1px solid rgba(201, 164, 92, 0.3);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+
+  z-index: 2;
+}
+
+/* Favorite button */
+
+.favorite-btn {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 248, 240, 0.92);
+
+  color: #963b57;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+  z-index: 3;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+
+  background: #b84a6b;
+
+  color: #ffffff;
+}
+
+.favorite-btn.active {
+  background: #b84a6b;
+
+  color: #ffffff;
+}
+
+/* Cake content */
+
+.cake-content {
+  padding: 24px 24px 23px;
+}
+
+.cake-type {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #b84a6b;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.cake-content h3 {
+  margin: 0 0 9px;
+
+  color: #352322;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.cake-content p {
+  min-height: 50px;
+
+  margin: 0 0 20px;
+
+  color: #806f6b;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Price + Order */
+
+.cake-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(53, 35, 34, 0.08);
+}
+
+.cake-bottom strong {
+  color: #352322;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.3rem;
+}
+
+.cake-order {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #b84a6b;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.cake-order i {
+  font-size: 0.75rem;
+
+  transition: transform 0.3s ease;
+}
+
+.cake-order:hover {
+  color: #963b57;
+
+  gap: 12px;
+}
+
+.cake-order:hover i {
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   FILTER ANIMATION
+========================================================= */
+
+.cake-card.filter-hidden {
+  display: none;
+}
+
+.cake-card.filter-show {
+  animation: cakeFilterIn 0.45s ease both;
+}
+
+@keyframes cakeFilterIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   CUSTOM CAKE BANNER
+========================================================= */
+
+.cake-custom-banner {
+  position: relative;
+
+  margin: 0 7% 110px;
+
+  min-height: 420px;
+
+  padding: 75px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 255, 255, 0.12),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #963b57, #b84a6b);
+
+  box-shadow: 0 25px 60px rgba(150, 59, 87, 0.18);
+}
+
+.cake-custom-banner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  right: -140px;
+  bottom: -220px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.cake-custom-banner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  right: 130px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.custom-banner-content {
+  max-width: 650px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.custom-banner-content .section-eyebrow {
+  color: #f7d9df;
+}
+
+.custom-banner-content h2 {
+  margin: 15px 0 18px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+
+  line-height: 1.08;
+}
+
+.custom-banner-content h2 em {
+  color: #f8dfb0;
+
+  font-style: italic;
+}
+
+.custom-banner-content p {
+  max-width: 570px;
+
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  line-height: 1.8;
+}
+
+.custom-banner-content .btn-light {
+  background: #fff8f0;
+
+  color: #963b57;
+
+  border: 1px solid #fff8f0;
+}
+
+.custom-banner-content .btn-light:hover {
+  background: #ffffff;
+
+  color: #b84a6b;
+
+  transform: translateY(-3px);
+}
+
+/* Decorative symbols */
+
+.custom-banner-decoration {
+  position: absolute;
+
+  right: 11%;
+  top: 50%;
+
+  width: 250px;
+  height: 250px;
+
+  transform: translateY(-50%);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.custom-banner-decoration span {
+  position: absolute;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  font-family: "Playfair Display", serif;
+}
+
+.custom-banner-decoration span:nth-child(1) {
+  top: 20px;
+  left: 35px;
+
+  font-size: 5rem;
+
+  transform: rotate(-15deg);
+}
+
+.custom-banner-decoration span:nth-child(2) {
+  top: 95px;
+  left: 125px;
+
+  color: rgba(248, 223, 176, 0.4);
+
+  font-size: 3rem;
+
+  animation: decorationSpin 8s linear infinite;
+}
+
+.custom-banner-decoration span:nth-child(3) {
+  right: 5px;
+  bottom: 20px;
+
+  font-size: 4rem;
+
+  transform: rotate(18deg);
+}
+
+@keyframes decorationSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .cakes-hero {
+    grid-template-columns: 1fr 0.85fr;
+
+    gap: 45px;
+
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .cake-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cake-filter-section,
+  .cake-collection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .cake-custom-banner {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .custom-banner-decoration {
+    right: 5%;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 850px) {
+  .cakes-hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    padding-top: 135px;
+    padding-bottom: 80px;
+
+    text-align: center;
+  }
+
+  .cakes-hero-content {
+    max-width: 720px;
+    margin: auto;
+  }
+
+  .cakes-hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cakes-hero-actions {
+    justify-content: center;
+  }
+
+  .cakes-hero-visual {
+    max-width: 520px;
+
+    justify-self: center;
+
+    margin-top: 15px;
+  }
+
+  .hero-badge {
+    left: 0;
+  }
+
+  .cake-custom-banner {
+    padding: 60px 45px;
+  }
+
+  .custom-banner-decoration {
+    opacity: 0.5;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .cakes-hero {
+    padding: 115px 20px 65px;
+  }
+
+  .cakes-hero-content h1 {
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+
+    letter-spacing: -1px;
+  }
+
+  .cakes-hero-content p {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+  .cakes-hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cakes-hero-actions .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .cakes-hero-visual {
+    max-width: 390px;
+  }
+
+  .cakes-hero-image {
+    border-radius: 170px 170px 20px 20px;
+  }
+
+  .hero-badge {
+    width: 100px;
+    height: 100px;
+
+    left: -5px;
+    bottom: 20px;
+  }
+
+  .hero-badge span {
+    font-size: 1.6rem;
+  }
+
+  .hero-badge small {
+    font-size: 0.58rem;
+  }
+
+  .cake-filter-section {
+    padding: 70px 20px 20px;
+  }
+
+  .cake-filter-section .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .cake-filter-section .section-heading h2 {
+    font-size: 2.35rem;
+  }
+
+  .cake-filters {
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    padding: 4px 2px 12px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cake-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cake-filter {
+    flex: 0 0 auto;
+
+    padding: 10px 17px;
+
+    font-size: 0.8rem;
+  }
+
+  .cake-collection {
+    padding: 35px 20px 75px;
+  }
+
+  .cake-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .cake-content {
+    padding: 21px 20px 20px;
+  }
+
+  .cake-content h3 {
+    font-size: 1.45rem;
+  }
+
+  .cake-content p {
+    min-height: auto;
+  }
+
+  .cake-custom-banner {
+    margin: 0 20px 75px;
+
+    min-height: auto;
+
+    padding: 55px 25px;
+
+    border-radius: 24px;
+  }
+
+  .custom-banner-content h2 {
+    font-size: 2.55rem;
+  }
+
+  .custom-banner-decoration {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .cakes-hero-content h1 {
+    font-size: 2.45rem;
+  }
+
+  .cakes-hero-image {
+    border-radius: 130px 130px 18px 18px;
+  }
+
+  .hero-badge {
+    width: 88px;
+    height: 88px;
+  }
+
+  .cake-filter-section .section-heading h2 {
+    font-size: 2.1rem;
+  }
+
+  .cake-custom-banner {
+    padding: 45px 20px;
+  }
+
+  .custom-banner-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cakes-hero-content,
+  .cakes-hero-visual,
+  .hero-badge,
+  .cake-card.filter-show,
+  .custom-banner-decoration span {
+    animation: none;
+  }
+
+  .cake-card,
+  .cake-image img,
+  .cake-filter,
+  .cake-order,
+  .favorite-btn {
+    transition: none;
+  }
+}
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(53, 35, 34, 0.12);
+  border-radius: 50%;
+
+  background: #fff8f0;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  z-index: 1100;
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 2px;
+
+  display: block;
+
+  background: #352322;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Hamburger animation */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   TABLET / MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 1050px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+
+    top: 82px;
+    right: 20px;
+    left: 20px;
+
+    max-height: calc(100vh - 105px);
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 5px;
+
+    background: rgba(255, 248, 240, 0.98);
+
+    border: 1px solid rgba(53, 35, 34, 0.08);
+
+    border-radius: 20px;
+
+    box-shadow: 0 25px 60px rgba(53, 35, 34, 0.16);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px) scale(0.98);
+
+    pointer-events: none;
+
+    overflow-y: auto;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0) scale(1);
+
+    pointer-events: auto;
+  }
+
+  .nav-menu > a {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    color: #352322;
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+  .nav-menu > a:hover,
+  .nav-menu > a.active {
+    color: #b84a6b;
+
+    background: rgba(184, 74, 107, 0.08);
+
+    padding-left: 20px;
+  }
+
+  .nav-menu .nav-order {
+    margin-top: 8px;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff !important;
+
+    background: #b84a6b;
+
+    border-radius: 12px;
+  }
+
+  .nav-menu .nav-order:hover {
+    color: #ffffff !important;
+
+    background: #963b57;
+
+    padding-left: 15px;
+  }
+
+  /* Prevent desktop navigation from showing */
+
+  .site-header .nav-menu {
+    visibility: hidden;
+  }
+
+  .site-header .nav-menu.active {
+    visibility: visible;
+  }
+}
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+@media (max-width: 600px) {
+  .site-header .navbar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .brand-logo .brand-text small {
+    max-width: 150px;
+
+    font-size: 0.52rem;
+
+    line-height: 1.35;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-menu {
+    top: 76px;
+    left: 14px;
+    right: 14px;
+
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .brand-logo .brand-text strong {
+    font-size: 1rem;
+  }
+
+  .brand-logo .brand-text small {
+    display: none;
+  }
+
+  .nav-menu {
+    top: 70px;
+  }
+}
